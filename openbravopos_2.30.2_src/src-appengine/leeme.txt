@@ -1,0 +1,77 @@
+usuarios:
+
+Guest
+
+""
+
+Employee
+
+12345
+
+****
+Cambiamos a jdk 1.7
+
+Cambiamos plugin de kindleIt por el de google.
+**************
+
+C:\apache-maven-3.1.1-bin\apache-maven-3.1.1\bin\mvn.bat appengine:devserver
+C:\apache-maven-3.1.1-bin\apache-maven-3.1.1\bin\mvn.bat appengine:update -P appengine
+
+********
+version 5
+********
+
+1. welcome file por el error en facebook.
+2. meta property, en lugar de meta name, para las propiedades de facebook.
+
+
+********
+ovarrendeiro-hrd
+********
+
+1. Filtro de fechas para visualizacion de pedidos.
+2. Empezamos con facturas con productos por defecto (null, productId en la linea).
+
+********
+version 2
+*********
+1. Empezamos con web services y restlet (http://localhost:8082/restlet/customers/) 
+test inicial con restlet http://localhost:8082/restlet/web
+2. Transformamos automáticamente los beans en strings con betwix.
+3. Empezamos con la lista de clientes, va a ser la base de la administración.
+
+**********
+version 1
+*********
+
+1. Introducimos xeración de pedidos online.
+2. jqueryui
+3. actualización de estilos	
+
+
+**********************************************
+README
+**********************************************
+
+1. Ficheros de internacionalizacion para los textos (faltan traducciones).
+2. TinyEditor para editor de textos largos (falta escapeXml = false).
+3. Empezamos con las facturas, y los numeros de las mismas.
+4. Listado y control de clientes.
+5. Consola de administración en entorno local: http://localhost:8080/_ah/admin/
+6. Relaciones sin propiedad, se relacionan por la clave.
+7. Incluimos dwr como framework para llamadas ajax.
+8. Las lineas de factura vienen automáticamente con la factura de BD.
+9. Extenso manejo de jquery para crear funciones al generar la línea de factura.
+10. Los numeros, van como maximo con 2 decimales en toda la pantalla del formulario de la factura.
+
+**********************************************
+TODO
+**********************************************
+
+1. Generación de facturas de varios tipos (no van a existir tipos, sí información de pago):
+	tipo 1: facturas mensuales (varias líneas con un mismo producto), tipo Pedrafurada
+	tipo 2: facturas diarias (con varios productos), tipo Casino (por defecto, crearemos 3 lineas o 4, y permiso para add mas lineas).
+
+2. Estilos cuando la factura esta guardada (orden del listado)
+3. Permitir editar facturas (no es imprescindible, se crea una nueva)
+4. Cuando la factura no es nueva, se debe poder imprimir desde la pantalla de detalla.

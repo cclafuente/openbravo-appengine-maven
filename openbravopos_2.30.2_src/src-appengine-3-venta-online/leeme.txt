@@ -1,0 +1,9 @@
+
+
+mvn clean appengine:devserver
+
+Esta versión está genial, es la mejor para appengine.
+
+A partir de aqui, naceran las mejoras en las siguientes versiones.
+
+No tocar nada de esta version.

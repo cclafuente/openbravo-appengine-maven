@@ -1,0 +1,7 @@
+
+login: empleado
+user: empleado
+
+RestaurantService funcionando de manera espectacular en appengine también.
+
+Version 4.

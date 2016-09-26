@@ -1,0 +1,8 @@
+
+
+mvn clean appengine:devserver
+
+Please fix the following errors:
+
+The value supplied (3.00) for field Payment Amount is invalid
+The value supplied (cash) for field Payment Type is invalid

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+  <!--  <application>ovarrendeiroopenbravo2</application> -->
+    <application>proyectopruebacloudplatform</application>
+    <version>1</version>
+    <sessions-enabled>true</sessions-enabled>
+    <threadsafe>true</threadsafe>
+    <use-google-connector-j>true</use-google-connector-j>
+  	<system-properties>
+    	<property name="ae-cloudsql.cloudsql-database-url" value="jdbc:google:mysql://proyectopruebacloudplatform:openbravocloudprueba1/openbravopos2?user=root" />
+    	<property name="ae-cloudsql.local-database-url" value="jdbc:mysql://207.223.167.6/openbravopos2?user=testuser&amp;password=testpass&amp;useSSL=false" />
+  	</system-properties>
+</appengine-web-app>

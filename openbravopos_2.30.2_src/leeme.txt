@@ -1,0 +1,2 @@
+Esta es la version que esta funcionando actualmente con maven.
+La mas sencilla de debugar, con tests en la parte de src-pos.
