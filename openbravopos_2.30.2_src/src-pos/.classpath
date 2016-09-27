@@ -7,8 +7,8 @@
   <classpathentry kind="output" path="target/classes"/>
   <classpathentry kind="var" path="M2_REPO/javax/xml/jaxrpc-api/1.1/jaxrpc-api-1.1.jar"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="src" path="/src-beans"/>
-  <classpathentry kind="src" path="/src-data"/>
+  <classpathentry kind="var" path="M2_REPO/com/openbravo/src-beans/1.0/src-beans-1.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/openbravo/src-data/1.0/src-data-1.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/rxtx/rxtxcomm/2.2pre2/rxtxcomm-2.2pre2.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/usb4java/usb4java/1.2.0/usb4java-1.2.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/usb4java/libusb4java/1.2.0/libusb4java-1.2.0-linux-x86.jar"/>
