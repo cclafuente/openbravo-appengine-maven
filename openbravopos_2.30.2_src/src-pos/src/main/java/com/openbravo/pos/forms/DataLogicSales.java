@@ -291,7 +291,7 @@ public class DataLogicSales extends BeanFactoryDataSingle {
                       , SerializerWriteString.INSTANCE
                       , new CustomerExtRead()).find(id);
     	
-    	Log.info(" cargando cliente " + ReflectionToStringBuilder.toString(customerInfo, ToStringStyle.MULTI_LINE_STYLE));
+    	Log.info(" cargando cliente id:" + id + "=" + ReflectionToStringBuilder.toString(customerInfo, ToStringStyle.MULTI_LINE_STYLE));
     	
     	
     	return customerInfo;
