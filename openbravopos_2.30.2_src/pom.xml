@@ -19,15 +19,8 @@
   	<platform>windows</platform>
   </properties>
   
-  <distributionManagement>
-  	<repository>
-  	 <id>cclafuente-openbravo-appengine-maven</id>
-  	 <url>https://github.com/cclafuente/openbravo-appengine-maven/mvn-repo/</url>
-    </repository>
-  </distributionManagement>
- 
- 
-  <scm>
+  
+ <scm>
 		<url>https://github.com/cclafuente/openbravo-appengine-maven</url>
 		<connection>scm:git:git://github.com/cclafuente/openbravo-appengine-maven.git</connection>
 		<developerConnection>scm:git:git@github.com/cclafuente/openbravo-appengine-maven.git</developerConnection>
@@ -53,72 +46,7 @@
 	          <target>1.7</target>
 	        </configuration>
 	      </plugin>
-	      <plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-scm-plugin</artifactId>
-			<version>1.9.5</version>
-			<configuration>
-				<providerImplementations>
-					<git>jgit</git>
-				</providerImplementations>
-				<tag>${project.artifactId}-${project.version}</tag>
-				<username>cclafuente@gmail.com</username>
-    			<password>3086Gpdf</password>
-   				<checkoutDirectory>${project.basedir}/src-beans</checkoutDirectory>
-    			<workingDirectory>${project.basedir}/src-beans</workingDirectory>
-    			<recursive>true</recursive>
-			</configuration>
-			<executions>
-				<execution>
-                                <id>add-version-to-git</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>add</goal>
-                                    <goal>checkin</goal>
-                                </goals>
-                                <configuration>
-                                    <basedir>./</basedir>
-                                    <includes>versions/*</includes>
-                                    <systemProperties>
-                                        <systemProperty>
-                                            <name>message</name>
-                                            <value>[Add Version to git]</value>
-                                        </systemProperty>
-                                    </systemProperties>
-                                </configuration>
-                            </execution>
-			</executions>
-			<dependencies>
-				<dependency>
-					<groupId>org.apache.maven.scm</groupId>
-					<artifactId>maven-scm-provider-jgit</artifactId>
-					<version>1.9.5</version>
-				</dependency>
-			</dependencies>
-		</plugin>
-        <plugin>
-            <groupId>com.github.github</groupId>
-            <artifactId>site-maven-plugin</artifactId>
-            <version>0.11</version>
-            <configuration>
-                <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
-                <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-                <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
-                <branch>refs/heads/mvn-repo</branch>                       <!-- remote branch name -->
-                <includes><include>**/*</include></includes>
-                <repositoryName>https://github.com/cclafuente/openbravo-appengine-maven</repositoryName>      <!-- github repo name -->
-                <repositoryOwner>cclafuente</repositoryOwner>    <!-- github username  -->
-            </configuration>
-            <executions>
-              <execution>
-                <goals>
-                  <goal>site</goal>
-                </goals>
-                <phase>deploy</phase>
-              </execution>
-            </executions>
-            </plugin>
-  	</plugins>
+	</plugins>
   </build>
   
   <modules>
