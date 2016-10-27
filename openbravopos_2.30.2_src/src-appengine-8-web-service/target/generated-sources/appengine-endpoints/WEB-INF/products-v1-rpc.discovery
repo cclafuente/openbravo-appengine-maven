@@ -1,0 +1,239 @@
+{
+ "kind": "discovery#rpcDescription",
+ "etag": "\"zRMgE0l9nVDW4S28VYYcYQF9UW4/1N9mhdw6dPlZy2WHuEBI6Y73au4\"",
+ "discoveryVersion": "v1",
+ "id": "products:v1",
+ "name": "products",
+ "version": "v1",
+ "description": "This is an API",
+ "icons": {
+  "x16": "http://www.google.com/images/icons/product/search-16.gif",
+  "x32": "http://www.google.com/images/icons/product/search-32.gif"
+ },
+ "protocol": "rpc",
+ "rootUrl": "https://proyectopruebacloudplatform.appspot.com/_ah/api/",
+ "rpcUrl": "https://proyectopruebacloudplatform.appspot.com/_ah/api/rpc",
+ "rpcPath": "/_ah/api/rpc",
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/userinfo.email": {
+     "description": "View your email address"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "BigDecimal": {
+   "id": "BigDecimal",
+   "type": "object",
+   "properties": {
+    "scale": {
+     "type": "integer",
+     "format": "int32"
+    }
+   }
+  },
+  "Product": {
+   "id": "Product",
+   "type": "object",
+   "properties": {
+    "code": {
+     "type": "string"
+    },
+    "com": {
+     "type": "boolean"
+    },
+    "id": {
+     "type": "string"
+    },
+    "image": {
+     "type": "string",
+     "format": "byte"
+    },
+    "name": {
+     "type": "string"
+    },
+    "priceBuy": {
+     "$ref": "BigDecimal"
+    },
+    "priceSell": {
+     "$ref": "BigDecimal"
+    },
+    "productCategory": {
+     "$ref": "ProductCategory"
+    },
+    "reference": {
+     "type": "string"
+    },
+    "tax": {
+     "$ref": "Tax"
+    },
+    "taxCategory": {
+     "$ref": "TaxCategory"
+    },
+    "taxPriceSell": {
+     "$ref": "BigDecimal"
+    }
+   }
+  },
+  "ProductCategory": {
+   "id": "ProductCategory",
+   "type": "object",
+   "properties": {
+    "code": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "image": {
+     "type": "string",
+     "format": "byte"
+    },
+    "name": {
+     "type": "string"
+    },
+    "productCollection": {
+     "type": "array",
+     "items": {
+      "$ref": "Product"
+     }
+    },
+    "productList": {
+     "type": "array",
+     "items": {
+      "$ref": "Product"
+     }
+    }
+   }
+  },
+  "Tax": {
+   "id": "Tax",
+   "type": "object",
+   "properties": {
+    "applicationRateOrder": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "categoryId": {
+     "type": "string"
+    },
+    "custCategoryId": {
+     "type": "string"
+    },
+    "id": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "parentId": {
+     "type": "string"
+    },
+    "rate": {
+     "$ref": "BigDecimal"
+    },
+    "rateCascade": {
+     "type": "boolean"
+    },
+    "rateOrder": {
+     "type": "integer",
+     "format": "int32"
+    },
+    "validFrom": {
+     "type": "string",
+     "format": "date-time"
+    }
+   }
+  },
+  "TaxCategory": {
+   "id": "TaxCategory",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "name": {
+     "type": "string"
+    },
+    "productCollection": {
+     "type": "array",
+     "items": {
+      "$ref": "Product"
+     }
+    }
+   }
+  }
+ },
+ "methods": {
+  "products.products.insert": {
+   "id": "products.products.insert",
+   "parameters": {
+    "resource": {
+     "$ref": "Product"
+    },
+    "times": {
+     "type": "integer",
+     "required": true,
+     "format": "int32"
+    }
+   },
+   "parameterOrder": [
+    "resource",
+    "times"
+   ],
+   "returns": {
+    "$ref": "Product"
+   },
+   "scopes": [
+    "https://www.googleapis.com/auth/userinfo.email"
+   ]
+  }
+ }
+}
